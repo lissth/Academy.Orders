@@ -1,0 +1,46 @@
+# --- VS / Solution ---
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Build outputs ---
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+logs/
+out/
+artifacts/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+# Publish / Packaging
+*.Publish.xml
+*.pubxml
+*.pubxml.user
+*.publishsettings
+*.nupkg
+*.snupkg
+packages/
+*.tmp
+*.lock.json
+
+# --- .NET / EF Core ---
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.mdb
+*.pdb
+*.cache
+*.dbmdl
+*.jfm
+
+# --- Configs locales / secretos ---
+secrets.json
+appsettings.*.local.json
+*.secret.json

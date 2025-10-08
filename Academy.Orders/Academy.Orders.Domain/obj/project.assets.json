@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.Orders.Domain.csproj",
-      "projectName": "Academy.Orders.Domain",
-      "projectPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.Orders.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
+      "projectName": "Academy.OrdersTracking.Domain",
+      "projectPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
       "packagesPath": "C:\\Users\\lisst\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\obj\\",
       "projectStyle": "PackageReference",
