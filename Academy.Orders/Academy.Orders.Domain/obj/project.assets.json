@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
+      "projectUniqueName": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
       "projectName": "Academy.OrdersTracking.Domain",
-      "projectPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
+      "projectPath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj",
       "packagesPath": "C:\\Users\\lisst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\obj\\",
+      "outputPath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

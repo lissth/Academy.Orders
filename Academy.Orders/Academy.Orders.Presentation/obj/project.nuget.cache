@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PVIRVqq/0n8=",
+  "dgSpecHash": "OmKDy6wMh5M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Presentation\\Academy.OrdersTracking.Presentation.csproj",
+  "projectFilePath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Presentation\\Academy.OrdersTracking.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lisst\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\lisst\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

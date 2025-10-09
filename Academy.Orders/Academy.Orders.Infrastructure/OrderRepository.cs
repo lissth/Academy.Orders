@@ -10,17 +10,17 @@ public class OrderRepository : IOrderTrackingRepository
 
     public OrderRepository(OrdersDbContext db) => _db = db;
 
-    // Trae la orden con Items + Historial (o null si no existe)
+    // Orden con Items e Historial 
     public async Task<Order?> GetOrderWithTrackingAsync(Guid orderId, CancellationToken ct = default)
     {
         return await _db.Orders
             .Include(o => o.Items)
             .Include(o => o.StatusHistory)
-            .AsNoTracking() // lectura, no vamos a modificar
+            .AsNoTracking() // lectura
             .FirstOrDefaultAsync(o => o.Id == orderId, ct);
     }
 
-    // Chequeo de permisos simple: el "dueño" de la orden debe coincidir con el usuario actual
+    // Validación de permisos el usuario de la orden debe coincidir con el usuario registrado
     public async Task<bool> UserCanSeeOrderAsync(Guid orderId, string currentUser, CancellationToken ct = default)
     {
         return await _db.Orders

@@ -15,17 +15,17 @@ public sealed class GetOrderTrackingQueryHandler
 
     public async Task<GetOrderTrackingResponse> Handle(GetOrderTrackingQuery request, CancellationToken ct)
     {
-        // 1) Autorización (criterio: "se valida que el cliente tenga permiso")
-        var authorized = await _repo.UserCanSeeOrderAsync(request.OrderId, request.CurrentUser, ct);
-        if (!authorized)
-            throw new UnauthorizedAccessException("No tienes permiso para consultar esta orden.");
-
-        // 2) Datos (criterio: "si la orden no existe... mensaje claro")
+        // 1) Buscar 
         var order = await _repo.GetOrderWithTrackingAsync(request.OrderId, ct);
         if (order is null)
-            throw new OrderNotFoundException(request.OrderId);
+            throw new OrderNotFoundException(request.OrderId); // -> 404
 
-        // 3) Mapeo a DTO (criterio: response con orderId, status, statusHistory, total)
+        // 2) Autorizar 
+        var authorized = string.Equals(order.CustomerName, request.CurrentUser, StringComparison.OrdinalIgnoreCase);
+        if (!authorized)
+            throw new UnauthorizedAccessException("No tienes permiso para consultar esta orden."); // -> 401
+
+        // 3) Mapear DTO
         return new GetOrderTrackingResponse
         {
             OrderId = order.Id,
@@ -40,10 +40,4 @@ public sealed class GetOrderTrackingQueryHandler
                 .ToList()
         };
     }
-}
-
-// Excepción específica para mapear a 404 en Presentation
-public sealed class OrderNotFoundException : Exception
-{
-    public OrderNotFoundException(Guid id) : base($"La orden {id} no existe.") { }
 }

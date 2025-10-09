@@ -4,16 +4,16 @@ namespace Academy.OrdersTracking.Domain.Entities;
 
 public class Order
 {
-    // Identificador único de la orden
+    // Id de la orden
     public Guid Id { get; private set; }
 
-    // Para validar permisos básicos (el “dueño” de la orden)
+    // Usuario de la orden
     public string CustomerName { get; private set; } = string.Empty;
 
-    // Estado actual (created|pending|confirmed|shipped|delivered|canceled)
+    // Status (created|pending|confirmed|shipped|delivered|canceled)
     public string Status { get; private set; } = "created";
 
-    // Total calculado con base en los items
+    // Total  a pagar por los items
     public decimal Total { get; private set; }
 
     // Colecciones internas y de solo lectura para exponer

@@ -164,11 +164,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Application\\Academy.OrdersTracking.Application.csproj",
+      "projectUniqueName": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Application\\Academy.OrdersTracking.Application.csproj",
       "projectName": "Academy.OrdersTracking.Application",
-      "projectPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Application\\Academy.OrdersTracking.Application.csproj",
+      "projectPath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Application\\Academy.OrdersTracking.Application.csproj",
       "packagesPath": "C:\\Users\\lisst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Application\\obj\\",
+      "outputPath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -189,8 +189,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj": {
-              "projectPath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj"
+            "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj": {
+              "projectPath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Domain\\Academy.OrdersTracking.Domain.csproj"
             }
           }
         }

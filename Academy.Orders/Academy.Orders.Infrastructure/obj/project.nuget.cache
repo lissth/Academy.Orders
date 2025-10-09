@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AlK7cAvOzoI=",
+  "dgSpecHash": "a1ddx9HD4+c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lisst\\Documents\\ORDENES\\Academy.Orders\\Academy.Orders.Infrastructure\\Academy.OrdersTracking.Infrastructure.csproj",
+  "projectFilePath": "D:\\GESTION_ORDENES\\Academy.Orders\\Academy.Orders\\Academy.Orders.Infrastructure\\Academy.OrdersTracking.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lisst\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\lisst\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
