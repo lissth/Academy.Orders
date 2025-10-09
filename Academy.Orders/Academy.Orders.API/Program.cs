@@ -1,33 +1,34 @@
-﻿using Academy.OrdersTracking.Application;           // AddApplication()
-using Academy.OrdersTracking.Infrastructure;        // AddInfrastructure() + OrdersDbContext
-using Academy.OrdersTracking.Presentation.Modules;  // MapOrderTracking
-using Microsoft.EntityFrameworkCore;                // Migrate()
+﻿using Academy.OrdersTracking.Application;           
+using Academy.OrdersTracking.Infrastructure;        
+using Academy.OrdersTracking.Presentation.Modules;  
+using Microsoft.EntityFrameworkCore;                
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1) Infraestructura: cadena de conexión desde appsettings.json
+// Infraestructura
 var cs = builder.Configuration.GetConnectionString("DefaultConnection")!;
 builder.Services.AddInfrastructure(cs);
 
-// 2) Application (MediatR)
+// Application 
 builder.Services.AddApplication();
 
-// 3) Swagger
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Swagger UI en desarrollo
+// Swagger UI 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    // 4) Crear BD / aplicar migraciones
+
+    // Crear BD
     await ApplyMigrationsAsync(app);
 }
-// 5) Endpoints
+// Endpoints
 app.MapOrderTracking();
 
 app.Run();
@@ -37,5 +38,5 @@ static async Task ApplyMigrationsAsync(WebApplication app)
 {
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<OrdersDbContext>();
-    await db.Database.MigrateAsync();   // crea la BD si no existe y aplica Migraciones pendientes
+    await db.Database.MigrateAsync();   
 }

@@ -8,13 +8,14 @@ using Microsoft.AspNetCore.Mvc; // FromHeader
 
 namespace Academy.OrdersTracking.Presentation.Modules;
 
-
+// Módulo para registrar los endpoints HTTP
 public static class OrderTrackingModule
 {
     public static IEndpointRouteBuilder MapOrderTracking(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/v1/orders");
 
+        // Define el endpoint GET /api/v1/orders/{orderId}
         group.MapGet("/{orderId:guid}", async (
             Guid orderId,
             [FromHeader(Name = "E-mailUser")] string? xUser,

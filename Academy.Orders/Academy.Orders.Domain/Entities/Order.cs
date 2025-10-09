@@ -16,7 +16,7 @@ public class Order
     // Total  a pagar por los items
     public decimal Total { get; private set; }
 
-    // Colecciones internas y de solo lectura para exponer
+    // Colecciones para mantener encapsulamiento
     private readonly List<OrderItem> _items = new();
     public IReadOnlyCollection<OrderItem> Items => _items;
 
@@ -26,7 +26,7 @@ public class Order
     public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; private set; }
 
-    // Requerido por EF Core
+    // Constructor requerido por EF Core
     private Order() { }
 
     public Order(Guid id, string customerName)

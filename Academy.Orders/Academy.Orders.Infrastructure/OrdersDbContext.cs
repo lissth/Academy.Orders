@@ -14,7 +14,7 @@ public class OrdersDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // === Orders ===
+        // Orders
         modelBuilder.Entity<Order>(e =>
         {
             e.ToTable("Orders");
@@ -24,7 +24,7 @@ public class OrdersDbContext : DbContext
             e.Property(x => x.Status).HasMaxLength(50).IsRequired();
             e.Property(x => x.Total).HasColumnType("decimal(18,2)");
 
-            // Relaciones 1:N con borrado en cascada (coincide con tu diagrama)
+            // Relacion 1:N 
             e.HasMany(x => x.Items)
                 .WithOne()
                 .HasForeignKey(i => i.OrderId)
@@ -36,7 +36,7 @@ public class OrdersDbContext : DbContext
                 .OnDelete(DeleteBehavior.Cascade);
         });
 
-        // === OrderItems ===
+        // OrderItems 
         modelBuilder.Entity<OrderItem>(e =>
         {
             e.ToTable("OrderItems");
@@ -46,7 +46,7 @@ public class OrdersDbContext : DbContext
             e.Property(x => x.Price).HasColumnType("decimal(18,2)");
         });
 
-        // === OrderStatusHistory ===
+        // OrderStatusHistory 
         modelBuilder.Entity<OrderStatusHistory>(e =>
         {
             e.ToTable("OrderStatusHistory");

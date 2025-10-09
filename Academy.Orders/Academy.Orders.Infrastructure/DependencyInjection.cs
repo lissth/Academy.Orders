@@ -10,7 +10,7 @@ public static class DependencyInjection
         this IServiceCollection services,
         string connectionString)
     {
-        // DbContext apuntando a SQL Server
+        // DbContext a SQL Server
         services.AddDbContext<OrdersDbContext>(opt =>
             opt.UseSqlServer(connectionString));
 
