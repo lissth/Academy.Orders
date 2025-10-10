@@ -6,8 +6,8 @@
 *.sln.docstates
 
 # --- Build outputs ---
-bin/
-obj/
+**/bin/
+**/obj/
 [Bb]uild/
 [Ll]og/
 logs/
