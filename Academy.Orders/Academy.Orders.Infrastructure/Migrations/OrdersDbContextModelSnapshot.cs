@@ -49,7 +49,7 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("OrdersT", (string)null);
                 });
 
             modelBuilder.Entity("Academy.OrdersTracking.Domain.Entities.OrderItem", b =>
@@ -76,7 +76,7 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItemsT", (string)null);
                 });
 
             modelBuilder.Entity("Academy.OrdersTracking.Domain.Entities.OrderStatusHistory", b =>
@@ -100,7 +100,7 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderStatusHistory", (string)null);
+                    b.ToTable("OrderStatusHistoryT", (string)null);
                 });
 
             modelBuilder.Entity("Academy.OrdersTracking.Domain.Entities.OrderItem", b =>

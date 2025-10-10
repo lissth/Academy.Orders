@@ -19,7 +19,7 @@ public sealed class GetOrderTrackingQueryHandler
     public async Task<GetOrderTrackingResponse> Handle(GetOrderTrackingQuery request, CancellationToken ct)
     {
         // Buscar la orden en el repositorio
-        var order = await _repo.GetOrderWithTrackingAsync(request.OrderId, ct);
+        Domain.Entities.Order? order = await _repo.GetOrderWithTrackingAsync(request.OrderId, ct);
         if (order is null)
             throw new OrderNotFoundException(request.OrderId); // 404
 

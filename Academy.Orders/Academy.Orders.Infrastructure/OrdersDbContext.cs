@@ -17,7 +17,7 @@ public class OrdersDbContext : DbContext
         // Orders
         modelBuilder.Entity<Order>(e =>
         {
-            e.ToTable("Orders");
+            e.ToTable("OrdersT");
             e.HasKey(x => x.Id);
 
             e.Property(x => x.CustomerName).HasMaxLength(100).IsRequired();
@@ -39,7 +39,7 @@ public class OrdersDbContext : DbContext
         // OrderItems 
         modelBuilder.Entity<OrderItem>(e =>
         {
-            e.ToTable("OrderItems");
+            e.ToTable("OrderItemsT");
             e.HasKey(x => x.Id);
 
             e.Property(x => x.ProductName).HasMaxLength(150).IsRequired();
@@ -49,7 +49,7 @@ public class OrdersDbContext : DbContext
         // OrderStatusHistory 
         modelBuilder.Entity<OrderStatusHistory>(e =>
         {
-            e.ToTable("OrderStatusHistory");
+            e.ToTable("OrderStatusHistoryT");
             e.HasKey(x => x.Id);
 
             e.Property(x => x.Status).HasMaxLength(50).IsRequired();

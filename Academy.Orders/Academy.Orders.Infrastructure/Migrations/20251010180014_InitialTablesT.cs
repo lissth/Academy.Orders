@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Academy.OrdersTracking.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialTablesT : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Orders",
+                name: "OrdersT",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -24,11 +24,11 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.PrimaryKey("PK_OrdersT", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderItems",
+                name: "OrderItemsT",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -39,17 +39,17 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderItems", x => x.Id);
+                    table.PrimaryKey("PK_OrderItemsT", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderItems_Orders_OrderId",
+                        name: "FK_OrderItemsT_OrdersT_OrderId",
                         column: x => x.OrderId,
-                        principalTable: "Orders",
+                        principalTable: "OrdersT",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderStatusHistory",
+                name: "OrderStatusHistoryT",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -59,23 +59,23 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderStatusHistory", x => x.Id);
+                    table.PrimaryKey("PK_OrderStatusHistoryT", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderStatusHistory_Orders_OrderId",
+                        name: "FK_OrderStatusHistoryT_OrdersT_OrderId",
                         column: x => x.OrderId,
-                        principalTable: "Orders",
+                        principalTable: "OrdersT",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderItems_OrderId",
-                table: "OrderItems",
+                name: "IX_OrderItemsT_OrderId",
+                table: "OrderItemsT",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderStatusHistory_OrderId",
-                table: "OrderStatusHistory",
+                name: "IX_OrderStatusHistoryT_OrderId",
+                table: "OrderStatusHistoryT",
                 column: "OrderId");
         }
 
@@ -83,13 +83,13 @@ namespace Academy.OrdersTracking.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderItems");
+                name: "OrderItemsT");
 
             migrationBuilder.DropTable(
-                name: "OrderStatusHistory");
+                name: "OrderStatusHistoryT");
 
             migrationBuilder.DropTable(
-                name: "Orders");
+                name: "OrdersT");
         }
     }
 }
